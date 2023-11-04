@@ -1,0 +1,224 @@
+html{
+    box-sizing: border-box;
+}
+.heading{
+width: 100%;
+padding:  20px;
+background-color:rgb(255, 214, 231);
+font-size: 20px;
+    
+}
+.heading_search{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.search{
+    display: flex;
+    width: 100%;
+    background-color: white; ;
+    padding: 5px;
+    border-radius: 5px;
+}
+.heading_language{
+    background-color: #DD3F24;
+    color: #FFFFFF;
+}
+.heading_searchText{
+    color: black;
+
+}
+.search_skill{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    outline: none;
+    font-size: 20px;
+}
+.search-btn{
+    background-color: red;
+    color: white;
+    width: 150px;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    margin: auto 0;
+    border-radius: 5px;
+
+
+}
+.select-input{
+    width: 250px;
+    height: 60px;
+    background-color: white;
+    cursor: pointer;
+    /* display: flex; */
+    text-align: left;
+    justify-content: space-between;
+    color: #292929;
+    position: relative;
+    border-radius: 5px;
+  
+}
+.select-input-label{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+     
+}
+.dropdown-List{
+    margin-top: 2px;
+    position: absolute;
+    top : 100%;
+    z-index: 1;
+    background-color: aquamarine;
+    width: 100%;
+    list-style: none;
+    padding: 10px 10px 10px 0px;
+    left: 0;
+    text-align: left; 
+
+}
+.dropdown-item{
+    padding: 10px 0;
+
+    
+}
+.dropdown-item:hover{
+    background-color: #fff;
+}
+
+.dropdown-text{
+    padding: 20px;
+}
+.color{
+    background-color: #888383;
+}
+.Content_tab{
+    width: 100%;
+    padding: 5px;
+    background-color: #FFFFFF;
+    
+}
+.tabUi{
+    display: flex;
+  
+}
+.tabs {
+    display: flex;
+    position: relative;
+    
+  }
+  .tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+  }
+  .tab-item {
+    min-width: 180px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #c23564;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: inline-block;
+   
+
+  }
+  .tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+  
+  }
+  .tab-item.active {
+    opacity: 1;
+    border-bottom: 5px solid red;
+  }
+
+
+  .Content{
+    width: 100%;
+    padding: 20px;
+    background-color:#fff;
+    margin-top: 10px;
+  }
+  .Content-Side{
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgb(254 238 235);
+    border: solid 1px #888383;
+    
+  }
+  .Content-Side:hover{
+    background-color: rgb(235, 254, 235);
+    }
+    .Content_img{
+       
+    }
+    .logo{
+        object-fit: contain;
+        position: relative;
+        padding-top : 10px;
+        /* padding: 25px 5px; */
+        
+    }
+    .Content_text{
+        flex: 1;
+        margin-left: 20px;
+    }
+    .Content_text-level{
+      
+    }
+    .Content_text-heading h1{
+        font-size: 20px;
+        padding-top: 5px;
+
+    }
+    .span_company{
+        font-size: 18px;
+        color: #424242;
+    }
+    .active{
+        color: #c23564;
+        font-weight: 600;
+
+    }
+
+
+    /* <div className="select-input">
+                    <span className="select-input-label">All level</span>
+                    <DownOutlined />
+                </div>
+
+                <div className="select-input">
+                    <span className="select-input-label">All job types</span>
+                    <DownOutlined />
+                </div>
+
+                <div className="select-input">
+                    <span className="select-input-label">All contract types</span>
+                    <DownOutlined />
+                </div> 
+                <div className="select-input" style={{width:170,backgroundColor: "#888383"}}>
+                    <span className="select-input-label">Clear filter</span>
+                </div>  */
+

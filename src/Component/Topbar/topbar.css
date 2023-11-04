@@ -1,0 +1,30 @@
+.topbar{
+    width: 100%;
+    background-color: yellow;
+    height: 50px;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+}
+.topbarWrapper{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    font-weight:  bold;
+    font-size: 30px;
+    color: darkblue;
+    cursor: pointer;
+}
+.topbarIconContaine{
+
+}
+.topIconBadgeContainer{
+    display: inline-block;
+    position: relative;
+}
+
+

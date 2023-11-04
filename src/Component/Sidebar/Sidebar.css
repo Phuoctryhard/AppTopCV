@@ -1,0 +1,66 @@
+/* Font family */
+body {
+  font-family: 'Arial', sans-serif; /* Thay 'Arial' bằng font mà bạn muốn sử dụng */
+}
+
+.sidebar {
+  flex: 1;
+  height: calc(100vh - 50px);
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 50px;
+  overflow-y: auto; /* Cho phép cuộn khi nội dung quá lớn */
+}
+
+.sidebarWrapper {
+  padding: 20px;
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 20px; /* Khoảng cách dưới mỗi sidebarMenu */
+  border-bottom: 1px solid #ccc; /* Đường viền dưới mỗi sidebarMenu */
+  padding-bottom: 10px; /* Khoảng cách giữa title và danh sách */
+}
+
+.sidebarTitle {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px; /* Khoảng cách dưới mỗi sidebarTitle */
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarListItem {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin-bottom: 8px; /* Khoảng cách dưới mỗi sidebarListItem */
+}
+
+.sidebarListItem.active,
+.sidebarListItem:hover {
+  background-color: #e0e0e0;
+  color: #000; /* Màu sắc khi hover */
+  transform: scale(1.05); /* Hiệu ứng scale khi hover */
+}
+
+.sidebarListItem > a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s; /* Transition màu sắc khi hover */
+}
+
+.sidebarIcon {
+  margin-right: 8px;
+  font-size: 20px;
+}
