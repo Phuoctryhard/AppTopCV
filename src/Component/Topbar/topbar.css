@@ -15,9 +15,10 @@
 }
 .logo{
     font-weight:  bold;
-    font-size: 30px;
+    font-size: 20px;
     color: darkblue;
     cursor: pointer;
+    line-height: 50px;
 }
 .topbarIconContaine{
 
@@ -25,6 +26,18 @@
 .topIconBadgeContainer{
     display: inline-block;
     position: relative;
+}
+.topLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-user{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
 }
 
 

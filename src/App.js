@@ -5,7 +5,7 @@ import Topbar from './Component/Topbar/index';
 import Home from './Pages/Home';
 import Recruitment from './Pages/Recruitment';
 import Analytics from './Pages/Analitics';
-
+import Detail from './Pages/Detail';
 function App() {
   return (
     <Router>
@@ -14,9 +14,11 @@ function App() {
         <div className="container">
           <Sidebar />
           <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/sales" element={<Recruitment />} />
+          <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/analytics" element={<Analytics/>} />
+          <Route path="/detail" element={<Detail/>} />
           </Routes>
         </div>
       </div>

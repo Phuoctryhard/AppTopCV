@@ -21,8 +21,8 @@ function Sidebar() {
               </Link>
             </li>
             <li className="sidebarListItem">
-              <Link to="/sales">
-                <HomeOutlined /> Sales
+              <Link to="/recruitment">
+                <HomeOutlined /> Recruitment
               </Link>
             </li>
           </ul>
@@ -32,34 +32,13 @@ function Sidebar() {
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <Link to="/chart">
-                <HomeOutlined /> Chart
+              <Link to="/detail">
+                <HomeOutlined /> Detail
               </Link>
             </li>
             <li className="sidebarListItem">
               <Link to="/report">
                 <HomeOutlined /> Report
-              </Link>
-            </li>
-            <li className="sidebarListItem">
-              <Link to="/home">
-                <HomeOutlined /> Home
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Dashboard</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <Link to="/home">
-                <HomeOutlined /> Home
-              </Link>
-            </li>
-            <li className="sidebarListItem">
-              <Link to="/home">
-                <HomeOutlined /> Home
               </Link>
             </li>
             <li className="sidebarListItem">

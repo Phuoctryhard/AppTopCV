@@ -2,8 +2,10 @@ import { ShoppingCartOutlined,ShoppingOutlined,UserOutlined,DollarCircleOutlined
 import { Card,Space,Statistic,Typography , Table} from "antd";
 import { useEffect, useState } from "react";
 import styles from "./index.module.css"
-import { getTotalPage } from "../../Api";      
+import { getTotalPage } from "../../Api";
+        
 function DashboardCard({ title, value, icon }) {
+
     return (
       <div>
       

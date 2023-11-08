@@ -1,8 +1,9 @@
+import InfoHome from "../../Component/InfoAnalitic";
 function Analytics(){
 
     return (
         <div>
-            <h1> Anh yeu em</h1>
+           <InfoHome/>
         </div>
     )
 }
