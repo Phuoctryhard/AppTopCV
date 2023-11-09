@@ -2,9 +2,11 @@ import { ShoppingCartOutlined,ShoppingOutlined,UserOutlined,DollarCircleOutlined
 import { Card,Space,Statistic,Typography , Table} from "antd";
 import { useEffect, useState } from "react";
 import styles from "./index.module.css"
-import { getTotalPage } from "../../Api";
+import { getTotalPage,getReacts } from "../../Api";
+
         
 function DashboardCard({ title, value, icon }) {
+
 
     return (
       <div>
@@ -20,6 +22,12 @@ function DashboardCard({ title, value, icon }) {
     );
   }
   function RecentOrder() {
+    const [reacts,setReacts] = useState([])
+    useEffect(()=>{
+      getReacts().then((res)=>{
+        setReacts(res);
+      })
+    },[]);
     return (
       <>
         <h1 className={styles.RecentOrder_para}>Recent Posts</h1>
@@ -35,39 +43,27 @@ function DashboardCard({ title, value, icon }) {
             <th className={styles.table_header}>react</th>
             <th className={styles.table_header}>comment</th>
           </tr>
-          <tr className={styles.recent_tablerow}>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Maria Anders</td>
-            <td className={styles.table_cell}>Germany</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Maria Anders</td>
-            <td className={styles.table_cell}>Germany</td>
+          {
+            reacts.map((element,index)=>{
+              return (
+            <tr className={styles.recent_tablerow}>
+            <td className={styles.table_cell}>{element.text}</td>
+            <td className={styles.table_cell}>{element.share}</td>
+            <td className={styles.table_cell}>{element.like}</td>
+            <td className={styles.table_cell}>{element.love}</td>
+            <td className={styles.table_cell}>{element.care}</td>
+
+            <td className={styles.table_cell}>{element.haha}</td>
+            <td className={styles.table_cell}>{element.angry}</td>
+            <td className={styles.table_cell}>{element.react}</td>
+            <td className={styles.table_cell}>{element.comment}</td>
           </tr>
-          <tr className={styles.recent_tablerow}>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Maria Anders</td>
-            <td className={styles.table_cell}>Germany</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Maria Anders</td>
-            <td className={styles.table_cell}>Germany</td>
-          </tr>
-          <tr className={styles.recent_tablerow}>
-            <td className={styles.table_cell}>Alfreds Futterkistfve</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Maria Anders</td>
-            <td className={styles.table_cell}>Germany</td>
-            <td className={styles.table_cell}>Alfreds Futterkiste</td>
-            <td className={styles.table_cell}>Maria Anders</td>
-            <td className={styles.table_cell}>Germany</td>
-          </tr>
+              )
+
+
+            })
+
+          } 
         </table>
 
       </>
@@ -81,9 +77,9 @@ function DashboardCard({ title, value, icon }) {
         setTotal(res[0]);
       })
     },[])
-    console.log(total.Like);
+    console.log(total.name);
     return (
-      <div>
+      <div className={styles.analisic}>
   
       <Space size={1} direction="vertical">
       <h1  className={styles.RecentOrder_para}>Page OverView</h1>
@@ -102,7 +98,7 @@ function DashboardCard({ title, value, icon }) {
             />
           }
           title={<span style={{ fontSize: '20px', color: 'blue' , fontWeight:500 }}>{"Group"}</span>}
-          value={total.Like}
+          value={total.name}
         />
         <DashboardCard
           icon={
@@ -118,7 +114,7 @@ function DashboardCard({ title, value, icon }) {
             />
           }
           title={<span style={{ fontSize: '20px', color: 'blue' , fontWeight:500 }}>{"Post"}</span>}
-          value={total.Like}
+          value={total.like}
         />
         <DashboardCard
           icon={
@@ -134,7 +130,7 @@ function DashboardCard({ title, value, icon }) {
             />
           }
           title={<span style={{ fontSize: '20px', color: 'blue' , fontWeight:500 }}>{"Like"}</span>}
-          value={total.Like}
+          value={total.like}
         />
         <DashboardCard
           icon={
@@ -150,7 +146,7 @@ function DashboardCard({ title, value, icon }) {
             />
           }
           title={<span style={{ fontSize: '20px', color: 'blue' , fontWeight:500 }}>{"Member"}</span>}
-          value={total.Like}
+          value={total.follow}
         />
       </Space>
       </Space>  
@@ -166,3 +162,27 @@ function DashboardCard({ title, value, icon }) {
 
 }
 export default InfoHome;
+
+
+// <tr className={styles.recent_tablerow}>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Maria Anders</td>
+// <td className={styles.table_cell}>Germany</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Maria Anders</td>
+// <td className={styles.table_cell}>Germany</td>
+// </tr>
+// <tr className={styles.recent_tablerow}>
+// <td className={styles.table_cell}>Alfreds Futterkistfve</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Maria Anders</td>
+// <td className={styles.table_cell}>Germany</td>
+// <td className={styles.table_cell}>Alfreds Futterkiste</td>
+// <td className={styles.table_cell}>Maria Anders</td>
+// <td className={styles.table_cell}>Germany</td>
+// </tr>

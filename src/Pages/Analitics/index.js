@@ -2,7 +2,7 @@ import InfoHome from "../../Component/InfoAnalitic";
 function Analytics(){
 
     return (
-        <div>
+        <div className="Analisic">
            <InfoHome/>
         </div>
     )

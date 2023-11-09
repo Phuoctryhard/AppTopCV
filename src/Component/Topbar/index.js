@@ -9,6 +9,7 @@ function Topbar(){
                 <div className="topLeft">
                     <img className="img-user" src={anh}></img>
                     <span className="logo">Ngô Đình Phước </span>
+                    <a href="/login" >Đăng nhập</a>
                 </div>
                 <div className="topRight">
                     <div className="topbarIconContainer">
